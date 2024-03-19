@@ -1,0 +1,19 @@
+body{
+    margin: 3%;
+    background-color: azure;
+}
+h1,h2,h3,h4,h5,h6{
+    color: rgb(26, 26, 32);
+    text-align: center;
+}
+.small-heading{
+    color: crimson;
+}
+.bold{
+    font-weight: bold;
+}
+.bgBlack{
+    background-color: black;
+    color: white;
+    
+}
