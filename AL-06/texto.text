@@ -1,0 +1,61 @@
+let imagens = [
+    "imgs/1.png",
+    "imgs/2.png",
+    "imgs/3.png",
+    "imgs/4.png",
+    "imgs/5.png",
+    "imgs/6.png",
+    "imgs/7.png",
+    "imgs/8.png",
+    "imgs/9.png"];
+
+let nomes = [
+    "bulbasaur",
+    "ivysaur",
+    "venusaur",
+    "charmander",
+    "charmeleon",
+    "charizard",
+    "squirtle",
+    "wartortle",
+    "blastoise",];
+
+let atual = 0;
+
+let grupo = document.querySelector("div");
+
+grupo.innerHTML += `<div id="nomes"></div>`;
+
+let quadro = document.querySelector("img");
+
+quadro.setAttribute("src",imagens[atual]);
+
+let nome = document.getElementById("nome");
+
+nome.innerText = nomes[atual];
+
+
+
+let proximo = document.getElementById("proximo");
+
+proximo.addEventListener("click", event =>{
+    event.preventDefault();
+    atual ++;
+    if (atual >= imagens.length){
+        atual = 0;
+    }
+    nome.innerText = nomes[atual];
+    quadro.setAttribute("src",imagens[atual]);
+});
+
+let anterior = document.getElementById("anterior");
+
+anterior.addEventListener("click", event =>{
+    event.preventDefault();
+    atual--;
+    if (atual <= 0){
+        atual = imagens.length - 1;
+    }
+    nome.innerText = nomes[atual];
+    quadro.setAttribute("src",imagens[atual]);
+});
